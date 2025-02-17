@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(72, 67, 67);
+        }
+        .container{
+            border: 1px solid rgb(235, 228, 228);
+            background-color: white;
+            height: 350px;
+            width: 400px;
+            margin-top: 20%;
+            margin-left: 40%;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .container .image #qrimg{
+            margin: 25px ;
+            width : 180px;
+            height: 180px;
+            text-align: center;
+        }
+        .container p{
+            font-weight: 900;
+            margin-bottom: 15px;
+
+        }
+        .container input{
+        width: 220px;
+        }
+        .container button{
+            width: 200px;
+            padding: 5px;
+            border-radius: 5px ;
+            color: azure;
+            background-color: rgb(59, 148, 231);
+            border-color: rgb(59, 148, 231);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="qrname">ENTER YOUR NAME OR URL</p>
+        <input type="text" placeholder="enter name or url" id="qrtext">
+        <div class="image"><img src="" alt="" id="qrimg"></div>
+        <button id="qrbutton" onclick="qrcode()">GENERATE QR CODE</button>
+    </div>
+    <script>
+         let qrtext = document.querySelector('#qrtext')
+        function qrcode(){
+            qrimg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrtext.value;
+        };
+
+    </script>
+</body>
+</html>
