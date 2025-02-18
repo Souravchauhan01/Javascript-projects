@@ -6,3 +6,4 @@ You can find all the code of javascript projects in this repository.
 #PROJECT2   REAL TIME CLOCK      FILE NAME = realtimeclock.html
 #PROJECT3   CELCIUS TO FARHEN.   FILE NAME = celtofah.html
 #PROJECT4   QR CODE GENERATOR    FILE NAME = qrcode.html
+#PROJECT5   DRAG AND DROP        FILE NAME = dragdrop.html
