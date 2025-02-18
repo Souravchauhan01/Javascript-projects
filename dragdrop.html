@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(48, 26, 174);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 650px;
+            min-height: 450px;
+            margin-top: 150px;
+            margin-left: 350px;
+            gap: 70px;
+        }
+        .left{
+            border: 2px dashed white;
+            width: 300px;
+            min-height: 450px;
+            
+        }
+
+        .right{
+            border: 2px dashed white;
+            width: 300px;
+            min-height: 450px;
+        }
+         #list{
+            display: flex;
+            height: 60px;
+            align-items: center;
+            margin: 30px;
+            width: 250px;
+            background-color: rgb(239, 24, 24);
+            cursor: grab;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+        <div class="left">
+            <div id="list" draggable="true">BOX 1</div>
+            <div id="list" draggable="true">BOX 2</div>
+            <div id="list" draggable="true">BOX 3</div>
+            <div id="list" draggable="true">BOX 4</div>
+        </div>
+        <div class="right"></div>
+    
+    </div>
+    <script>
+        let lists = document.querySelectorAll("#list");
+        let rightbox = document.querySelector(".right");
+        let leftbox = document.querySelector(".left");
+
+        lists.forEach((list) => {
+            list.addEventListener("dragstart", function(e){
+                let selected = e.target;
+
+                rightbox.addEventListener("dragover", function(e){
+                    e.preventDefault();
+                });
+                rightbox.addEventListener("drop", function(e){
+                    rightbox.appendChild(selected);
+                    
+                });
+            })
+        })
+    </script>
+</body>
+</html>
