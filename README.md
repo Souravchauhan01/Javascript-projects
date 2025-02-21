@@ -8,3 +8,4 @@ You can find all the code of javascript projects in this repository.
 #PROJECT4   QR CODE GENERATOR    FILE NAME = qrcode.html
 #PROJECT5   DRAG AND DROP        FILE NAME = dragdrop.html
 #PROJECT6   STOPWATCH            FILE NAME = stopwatch.html
+#PROJECT7   CHANGE TEXT          FILE NAME = changetext.html
